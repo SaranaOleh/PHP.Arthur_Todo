@@ -1,0 +1,14 @@
+<h1>First view</h1>
+<a href="/phpRecipeBook/" class="back">На главную</a>
+{% for cat in cats %}
+    <a href="cats/{{ cat.id }}">
+        <img src="{{ cat.url }}" alt="" height="200">
+    </a>
+{% endfor %}
+<div>
+    <form action="addcat" method="post">
+        <input type="text" name="name" placeholder="name">
+        <input type="text" name="url" placeholder="url">
+        <input type="submit">
+    </form>
+</div>

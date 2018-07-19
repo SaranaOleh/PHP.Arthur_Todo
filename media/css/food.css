@@ -1,0 +1,33 @@
+*, html, body{margin: 0; padding: 0;list-style: none;text-decoration: none;box-sizing: border-box;}
+header{height: 100px;text-align: center;background: #ff98003d;}
+.logo{font-size: 3rem;font-weight: 800;font-family: monospace;line-height: 100px;color: #3F51B5;display: block;width: 100%;max-width: 980px;background: url(../images/castrulya.jpg);background-size: contain;background-repeat: no-repeat;
+    margin: auto;}
+footer{position: fixed;bottom: 0;left: 0;right: 0;height: 50px;text-align: center;background: #3F51B5;}
+.redirect{line-height: 50px;color: white;font-size: 2rem;font-weight: 600;}
+footer a{color: white;}
+footer p a:hover{color: chocolate;cursor: pointer;}
+.container{display: flex;width: 100%;max-width: 1500px;margin: 100px auto;}
+.block{flex: 1;height: 400px;border-right: 3px solid #3F51B5;display: flex;justify-content:  center;flex-direction: column;align-items: center;opacity: 0.7;}
+main{padding-bottom: 50px;}
+.container .block:first-child{border-left: 3px solid #3F51B5;}
+.block img{width: 100%;}
+.block p{font-size: 1.5rem;color: chocolate;}
+.block:hover{opacity: 1;}
+.desert a{width: 100%;}
+.home{color: chocolate;}
+
+.recipes{width: 100%;max-width: 1024px;margin: 50px auto;}
+.blockRecipes{display: flex;justify-content: space-between;align-items: center;height: 200px;border-bottom: 2px solid #3F51B5;}
+.prevyu{width: 20%;}
+.prevyu img{width: 100%;max-height: 180px;}
+.describe{width: 65%;}
+.name{color: chocolate;}
+.desc{color: deepskyblue;margin-top: 10px;}
+
+.card{width: 100%;max-width: 1024px;margin: 50px auto;}
+.cardTitle{display: flex;margin-bottom: 20px;font-size: 1.2em;color: chocolate;}
+.cardPrev{width: 30%;margin-right: 15px;}
+.cardPrev img{width: 100%;}
+.cardDesc{font-size: 1.5em;color: #3F51B5;margin-bottom: 30px;}
+
+.describe a{color: chocolate;}

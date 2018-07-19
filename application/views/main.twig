@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start</title>
+    <link rel="stylesheet" type="text/css" href="{{ URLROOT }}media/css/main.css">
+</head>
+<body>
+<header>
+    <div class="h_top_block">
+        <div class="logo">
+            <p>TODO</p>
+        </div>
+        <div class="enter">
+            {% if is_auth %}
+                <p>Здравствуй <b>{{ user.login }}</b></p>
+                <a href="logout">Выйти</a>
+            {% else %}
+                <a href="login">Вход</a><br>
+                <a href="register">Регистрация</a>
+            {% endif %}
+            
+        </div>
+    </div>
+</header>
+<main>
+    {% if is_auth %}
+    <div class="m_block_one">
+        {% for note in notes %}
+            <div class="note">
+                <p>{{ note.note }}</p>
+                <a href="{{ URLROOT }}note/{{ note.id }}">
+                    <div class="del">
+                        <div class="stringOne"></div>
+                        <div class="stringTwo"></div>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <p>Заметки только авторизованым пользователям</p>
+    {% endif %}
+</main>
+{% if is_auth %}
+    <footer>
+        <form action="{{ URLROOT }}add" method="post">
+            <textarea name="note" id="note"></textarea>
+            <input type="submit" class="submit">
+        </form>
+    </footer>
+{% endif %}
+<script src="js/script.js"></script>
+</body>
+</html>
